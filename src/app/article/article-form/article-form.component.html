@@ -1,0 +1,55 @@
+<div class="box box-info">
+  <div class="box-header with-border">
+    <h3 class="box-title">编辑</h3>
+  </div>
+  <!-- /.box-header -->
+  <!-- form start -->
+  <form class="form-horizontal" [formGroup]="articleForm" (ngSubmit)="onSave()">
+    <div class="box-body">
+      <div class="form-group">
+        <label for="title" class="col-sm-2 control-label">标题</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" formControlName="title" placeholder="标题" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="author" class="col-sm-2 control-label">作者</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" formControlName="author" placeholder="作者" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="link" class="col-sm-2 control-label">链接</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" formControlName="link" placeholder="链接" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="desc" class="col-sm-2 control-label">描述</label>
+        <div class="col-sm-6">
+          <textarea type="text" class="form-control" formControlName="desc"
+            placeholder="描述" required></textarea>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="categories" class="col-sm-2 control-label">分类</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" formControlName="categories" placeholder="分类"
+            required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="star" class="col-sm-2 control-label">推荐指数</label>
+        <div class="col-sm-6">
+          <app-stars [(rating)]="article.star" [readonly]="false"></app-stars>
+        </div>
+      </div>
+    </div>
+    <!-- /.box-body -->
+    <div class="box-footer">
+      <button (click)="onClick()" type="submit" class="btn btn-default">取消</button>
+      <button (click)="onSave()" type="submit" class="btn btn-info pull-right">保存</button>
+    </div>
+    <!-- /.box-footer -->
+  </form>
+</div>

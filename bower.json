@@ -1,0 +1,22 @@
+{
+  "name": "angular adminLTE",
+  "description": "",
+  "main": "",
+  "authors": [
+    "biaogebusy <349255833@qq.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/biaogebusy/Learning",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ionicons": "^4.5.1",
+    "jQuery": "^3.3.1",
+    "font-awesome": "4"
+  }
+}

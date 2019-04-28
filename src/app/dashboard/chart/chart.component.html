@@ -1,0 +1,12 @@
+<form #myForm="ngForm">
+  <div>用户名：<input [(ngModel)]="person.userName" name="name" class="form-control" type="text"></div>
+  <div>邮箱：<input [(ngModel)]="person.email" name="emial" class="form-control" type="email"></div>
+  <div>邮编：<input [(ngModel)]="person.postCode" name="pastCode" class="form-control" type="number"></div>
+  <div>密码：<input [(ngModel)]="person.password" name="password" class="form-control" type="password"></div>
+  <div>确认密码：<input [(ngModel)]="person.rePassword" name="rePassword" class="form-control" type="password"></div>
+  <button type="submit">注册</button>
+</form>
+
+<pre>
+  {{myForm.value | json}}
+</pre>

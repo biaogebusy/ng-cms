@@ -1,0 +1,6 @@
+<!--
+ /**
+  * [class.class] 是内置属性指令，当右侧表达式为真时，给元素添加相应的class
+  */
+-->
+<span *ngFor="let star of stars; let i = index" (click)="clickStar(i)" class="glyphicon glyphicon-star" [class.glyphicon-star-empty]="star"></span>
