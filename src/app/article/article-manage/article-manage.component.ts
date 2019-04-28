@@ -10,9 +10,9 @@ import { debounceTime } from 'rxjs/operators';
 })
 export class ArticleManageComponent implements OnInit {
 
-  private articles: Array<Article>;
-  private nameFilter: FormControl = new FormControl();
-  private keyword: string;
+  articles: Array<Article>;
+  nameFilter: FormControl = new FormControl();
+  keyword: string;
 
   constructor(private router: Router, private articleService: ArticleService) {
   }

@@ -16,7 +16,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ArticleFormComponent } from './article/article-form/article-form.component';
 import { ArticleService } from './article/article.service';
 import { ArticleFilterPipe } from './article/article-filter.pipe';
-import { ChartComponent } from './dashboard/chart/chart.component';
 
 /**
  * 配置路由信息
@@ -43,9 +42,8 @@ const appRoutes: Routes = [
     StarsComponent,
     DashboardComponent,
     ArticleFormComponent,
-    ArticleFilterPipe,
-    ChartComponent
-  ],
+    ArticleFilterPipe
+    ],
   // 声明正常运转还需要什么东西，也就是AppModule模块依赖的模块
   imports: [
     BrowserModule,
