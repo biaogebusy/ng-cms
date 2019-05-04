@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class MenuComponent implements OnInit {
 
-  correntMent: number;
+  currentMenu: number;
   menus: Array<Menu>;
 
   constructor(private router: Router) { }
@@ -22,7 +22,7 @@ export class MenuComponent implements OnInit {
 
   nav(menu: Menu) {
     this.router.navigateByUrl(menu.url);
-    this.correntMent = menu.id;
+    this.currentMenu = menu.id;
   }
 
 }

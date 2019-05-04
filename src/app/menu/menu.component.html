@@ -31,7 +31,7 @@
     <ul class="sidebar-menu" data-widget="tree">
       <li class="header">导航</li>
       <!-- Optionally, you can add icons to the links -->
-      <li *ngFor="let menu of menus" [class.active]="correntMent == menu.id">
+      <li *ngFor="let menu of menus" [class.active]="currentMenu == menu.id">
         <a href="javascript:;" (click)="nav(menu)"><i class="fa fa-link"></i> <span>{{menu.title}}</span></a>
       </li>
       <li class="treeview">
