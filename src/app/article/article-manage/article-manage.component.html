@@ -25,12 +25,14 @@
         <th>操作</th>
       </tr>
       <tr *ngFor="let article of articles | articleFilter: 'title': keyword">
-        <td>第{{article.id}}期</td>
-        <td><a href="{{article.url}}">{{article.title}}</a></td>
-        <td>{{article.author}}</td>
-        <td>{{article.desc}}</td>
-        <td><app-stars [rating]="article.star"></app-stars></td>
-        <td>{{article.categories}}</td>
+        <td>第{{article.attributes.field_term}}期</td>
+        <td><a href="{{article.attributes.field_url.uri}}">{{article.attributes.title}}</a></td>
+        <td>{{article.attributes.field_author}}</td>
+        <td>{{article.attributes.body.summary | slice:0:100}}</td>
+        <td>
+          <app-stars [rating]="article.attributes.field_star"></app-stars>
+        </td>
+        <td>{{article.attributes.tags}}</td>
         <td>
           <a href="javascript:;" class="btn btn-warning btn-xs" (click)="update(article)"><span class="glyphicon glyphicon-pencil"></span> 修改</a>
           <a href="" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> 删除</a>
