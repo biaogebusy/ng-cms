@@ -1,18 +1,32 @@
-import { Injectable } from "@angular/core";
-import { HttpClient, HttpHeaders } from "@angular/common/http";
-import { Observable } from "rxjs";
+import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Article } from './article';
+
+const httpOptions = {
+  headers: new HttpHeaders({
+    Accept: 'application/vnd.api+json',
+    'Content-Type': 'application/json'
+  })
+};
 
 @Injectable({
-  providedIn: "root"
+  providedIn: 'root'
 })
 export class ArticleService {
-  articles = {};
   // web api
-  private articleUrl = "https://jsonapi.dd:8443/jsonapi/node/article";
+  private api = {
+    dev: 'http://jsonapi.dd:8083/jsonapi/node/article',
+    prod: 'http://api.zhaobg.com/jsonapi/node/article'
+  };
 
   constructor(private http: HttpClient) {}
 
-  getArticles(): Observable<any> {
-    return this.http.get(this.articleUrl);
+  getArticles(): any {
+    return this.http.get(this.api.dev, httpOptions);
+  }
+
+  getArticle(uuid): any {
+    return this.http.get(this.api.dev + '/' + uuid, httpOptions);
   }
 }

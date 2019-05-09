@@ -27,7 +27,7 @@
       <tr *ngFor="let article of articles | articleFilter: 'title': keyword">
         <td>第{{article.attributes.field_term}}期</td>
         <td><a href="{{article.attributes.field_url.uri}}">{{article.attributes.title}}</a></td>
-        <td>{{article.attributes.field_author}}</td>
+        <td>{{article.attributes.field_author | slice:0:10}}</td>
         <td>{{article.attributes.body.summary | slice:0:100}}</td>
         <td>
           <app-stars [rating]="article.attributes.field_star"></app-stars>

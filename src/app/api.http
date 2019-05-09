@@ -1,1 +1,1 @@
-GET https://jsonapi.dd:8443/jsonapi/node/article
+GET http://api.zhaobg.com/jsonapi/node/article

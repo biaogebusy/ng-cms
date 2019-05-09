@@ -1,4 +1,4 @@
-export class Article {
+export interface Article {
     id: number; // 期数
     title: string; // 文章标题
     author: string; // 文章作者
