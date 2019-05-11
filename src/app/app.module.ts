@@ -1,5 +1,4 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -17,6 +16,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ArticleFormComponent } from './article/article-form/article-form.component';
 import { ArticleFilterPipe } from './article/article-filter.pipe';
 import { PhotosComponent } from './photos/photos/photos.component';
+import { CoreModule } from './core/core.module';
 
 /**
  * 配置路由信息
@@ -49,7 +49,7 @@ const appRoutes: Routes = [
   // 声明正常运转还需要什么东西，也就是AppModule模块依赖的模块
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,
+    CoreModule,
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
