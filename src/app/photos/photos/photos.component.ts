@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PhotosService } from '../photos.service';
+import { PhotosService } from '../../services/unsplash.service';
 
 @Component({
   selector: 'app-photos',
@@ -12,7 +12,7 @@ export class PhotosComponent implements OnInit {
   constructor(private photoService: PhotosService) { }
 
   ngOnInit() {
-    this.getPhotos();
+    this.photoService.currentUser();
     // console.log(this.photos)
   }
 

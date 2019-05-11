@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import { Router } from '@angular/router';
 // import { ArticleService, Article } from '../article.service';
-import { ArticleService } from '../../services/article/article.service';
+import { ArticleService } from '../../services/article.service';
 import { FormControl } from '@angular/forms';
 import { debounceTime } from 'rxjs/operators';
 import { Observable } from 'rxjs';
