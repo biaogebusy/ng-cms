@@ -1,1 +1,3 @@
 GET http://api.zhaobg.com/jsonapi/node/article
+
+Accept: application/json

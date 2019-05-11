@@ -1,12 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { Article } from '../inerfaces/article';
 
 const httpOptions = {
   headers: new HttpHeaders({
-    Accept: 'application/vnd.api+json',
-    'Content-Type': 'application/json'
+    // Make sure you always send the accept header: Accept: application/vnd.api+json.
+    Accept: 'application/vnd.api+json'
   })
 };
 
