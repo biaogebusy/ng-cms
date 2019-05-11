@@ -14,7 +14,6 @@ import { StarsComponent } from './stars/stars.component';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ArticleFormComponent } from './article/article-form/article-form.component';
-import { ArticleService } from './article/article.service';
 import { ArticleFilterPipe } from './article/article-filter.pipe';
 import { PhotosComponent } from './photos/photos/photos.component';
 
@@ -55,7 +54,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes)
   ],
   // 模块中提供了什么服务，只能声明服务
-  providers: [ArticleService],
+  providers: [],
   // 声明主组件
   bootstrap: [AppComponent]
 })
