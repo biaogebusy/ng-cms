@@ -12,7 +12,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ArticleFormComponent } from './article/article-form/article-form.component';
 import { ArticleFilterPipe } from './article/article-filter.pipe';
-import { PhotosComponent } from './photos/photos/photos.component';
+import { PhotoComponent } from './photos/photo/photo.component';
+import { PhotoListComponent } from './photos/photo-list/photo-list.component';
 
 
 /**
@@ -37,7 +38,8 @@ const appRoutes: Routes = [
     DashboardComponent,
     ArticleFormComponent,
     ArticleFilterPipe,
-    PhotosComponent
+    PhotoComponent,
+    PhotoListComponent
     ],
   // 声明正常运转还需要什么东西，也就是AppModule模块依赖的模块
   imports: [

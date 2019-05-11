@@ -27,7 +27,7 @@ export class UnsplashService {
   }
 
   getPhotos(term: string, page: number, height: number): Observable<IPhoto> {
-    return from(this.unsplash.search.collections(term, page).then(toJson));
+    return from(this.unsplash.search.collections(term, page, height).then(toJson));
   }
 
   getPhoto(id: string, width: number, height: number): Observable<IPhoto> {
