@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { UnsplashService } from '../services/unsplash.service';
+import { IGallery } from '../inerfaces/gallery';
+import { IPhoto } from '../inerfaces/photo';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  gallery: IGallery = {
+    total: 0,
+    total_pages: 0,
+    results: []
+  };
+
+  constructor(private unsplash: UnsplashService) {}
 
   ngOnInit() {
+    this.unsplash.getGallery('code').subscribe((data: IGallery) => {
+      console.log(data);
+      this.gallery = data;
+    });
   }
-
 }

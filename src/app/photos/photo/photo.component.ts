@@ -1,24 +1,25 @@
-import { Component, OnInit } from '@angular/core';
-import { UnsplashService } from '../../services/unsplash.service';
+import { Component, OnInit, Input } from '@angular/core';
+import { IPhoto } from 'src/app/inerfaces/photo';
+import { isNgTemplate } from '@angular/compiler';
 
 @Component({
-  selector: 'app-photos',
+  selector: 'app-photo',
   templateUrl: './photo.component.html',
   styleUrls: ['./photo.component.css']
 })
 export class PhotoComponent implements OnInit {
-  photos: any;
-  constructor(private unsplashService: UnsplashService) {}
+  @Input() item: IPhoto;
+  avatarStyles: {};
+  constructor() {}
 
   ngOnInit() {
-    this.getPhotos();
-    // console.log(this.photos)
+    this.setAvatarStyles();
   }
 
-  getPhotos(): void {
-    this.unsplashService.getGallery('code')
-    .subscribe(json =>{
-      console.log(json);
-    })
+  setAvatarStyles() {
+    this.avatarStyles = {
+      'background-image': `url(${this.item.user.profile_image.medium})`,
+      'background-size': 'cover'
+    };
   }
 }
