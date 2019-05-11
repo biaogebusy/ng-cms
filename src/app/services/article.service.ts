@@ -20,8 +20,13 @@ export class ArticleService {
 
   constructor(private http: HttpClient) {}
 
-  getArticles(): any {
-    return this.http.get(this.api.prod, httpOptions);
+  getArticles(limit: number): any {
+    // ?page[limit]=10
+    let filter = '';
+    if (limit) {
+      filter = `?page[limit]=${limit}`;
+    }
+    return this.http.get(`${this.api.prod}${filter}`, httpOptions);
   }
 
   getArticle(uuid): any {

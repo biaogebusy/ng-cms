@@ -33,7 +33,7 @@ export class ArticleManageComponent implements OnInit {
   }
 
   getArticles(): void {
-    this.articleService.getArticles()
+    this.articleService.getArticles(8)
     .subscribe(json => {
       this.articles = json.data;
       console.log(this.articles);
