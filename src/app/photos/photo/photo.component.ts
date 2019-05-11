@@ -3,10 +3,10 @@ import { UnsplashService } from '../../services/unsplash.service';
 
 @Component({
   selector: 'app-photos',
-  templateUrl: './photos.component.html',
-  styleUrls: ['./photos.component.css']
+  templateUrl: './photo.component.html',
+  styleUrls: ['./photo.component.css']
 })
-export class PhotosComponent implements OnInit {
+export class PhotoComponent implements OnInit {
   photos: any;
   constructor(private unsplashService: UnsplashService) {}
 
