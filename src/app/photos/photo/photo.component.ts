@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { IPhoto } from 'src/app/inerfaces/photo';
-import { isNgTemplate } from '@angular/compiler';
 
 @Component({
   selector: 'app-photo',
