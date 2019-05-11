@@ -4,10 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { MenuComponent } from './menu/menu.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
-import { FooterComponent } from './footer/footer.component';
+import { CoreModule } from './core/core.module';
 import { ContentComponent } from './content/content.component';
 import { ArticleManageComponent } from './article/article-manage/article-manage.component';
 import { StarsComponent } from './stars/stars.component';
@@ -16,7 +13,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ArticleFormComponent } from './article/article-form/article-form.component';
 import { ArticleFilterPipe } from './article/article-filter.pipe';
 import { PhotosComponent } from './photos/photos/photos.component';
-import { CoreModule } from './core/core.module';
+
 
 /**
  * 配置路由信息
@@ -34,10 +31,6 @@ const appRoutes: Routes = [
   // declarations 只能用来声明组件、指令、管道
   declarations: [
     AppComponent,
-    HeaderComponent,
-    MenuComponent,
-    SidebarComponent,
-    FooterComponent,
     ContentComponent,
     ArticleManageComponent,
     StarsComponent,
