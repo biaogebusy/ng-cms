@@ -16,13 +16,13 @@
     <table class="table table-bordered">
       <tbody>
       <tr>
-        <th>期数</th>
+        <th style="width: 70px">期数</th>
         <th>标题</th>
         <th>作者</th>
         <th>文章简介</th>
-        <th>推荐指数</th>
-        <th>分类</th>
-        <th>操作</th>
+        <th style="width: 100px">推荐指数</th>
+        <th style="width: 60px">分类</th>
+        <th style="width: 136px">操作</th>
       </tr>
       <tr *ngFor="let article of articles | articleFilter: 'title': keyword">
         <td>第{{article.attributes.field_term}}期</td>
@@ -34,7 +34,7 @@
         </td>
         <td>{{article.attributes.tags}}</td>
         <td>
-          <a href="javascript:;" class="btn btn-warning btn-xs" (click)="update(article)"><span class="glyphicon glyphicon-pencil"></span> 修改</a>
+          <a href="javascript:;" class="btn btn-warning btn-xs" (click)="update(article)"><span class="glyphicon glyphicon-pencil"></span> 修改</a> &nbsp;
           <a href="" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> 删除</a>
         </td>
       </tr>
