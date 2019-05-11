@@ -7,7 +7,7 @@ import { IPhoto } from '../inerfaces/photo';
 @Injectable({
   providedIn: 'root'
 })
-export class PhotosService {
+export class UnsplashService {
   private unsplash;
 
   photos: any;

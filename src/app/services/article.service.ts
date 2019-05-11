@@ -23,10 +23,10 @@ export class ArticleService {
   constructor(private http: HttpClient) {}
 
   getArticles(): any {
-    return this.http.get(this.api.dev, httpOptions);
+    return this.http.get(this.api.prod, httpOptions);
   }
 
   getArticle(uuid): any {
-    return this.http.get(this.api.dev + '/' + uuid, httpOptions);
+    return this.http.get(this.api.prod + '/' + uuid, httpOptions);
   }
 }

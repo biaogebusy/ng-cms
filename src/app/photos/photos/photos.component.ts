@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PhotosService } from '../../services/unsplash.service';
+import { UnsplashService } from '../../services/unsplash.service';
 
 @Component({
   selector: 'app-photos',
@@ -7,17 +7,18 @@ import { PhotosService } from '../../services/unsplash.service';
   styleUrls: ['./photos.component.css']
 })
 export class PhotosComponent implements OnInit {
-
-  photos: [];
-  constructor(private photoService: PhotosService) { }
+  photos: any;
+  constructor(private unsplashService: UnsplashService) {}
 
   ngOnInit() {
-    this.photoService.currentUser();
+    this.getPhotos();
     // console.log(this.photos)
   }
 
   getPhotos(): void {
-    this.photos = this.photoService.getPhotos();
+    this.unsplashService.getGallery('code')
+    .subscribe(json =>{
+      console.log(json);
+    })
   }
-
 }
