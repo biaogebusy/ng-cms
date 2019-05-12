@@ -1,6 +1,6 @@
 <div class="box">
   <div class="box-header with-border">
-    <a href="javascript:;" class="btn btn-success btn-sm" (click)="create()"><i class="glyphicon glyphicon-plus"></i> 新增</a>
+    <a href="javascript:;" mat-flat-button color="primary" (click)="create()">New</a>
     <div class="box-tools">
       <div class="input-group input-group-sm" style="width: 150px;">
         <input [formControl]="nameFilter" type="text" name="table_search" class="form-control pull-right"
@@ -22,7 +22,7 @@
         <th>文章简介</th>
         <th style="width: 100px">推荐指数</th>
         <th style="width: 60px">分类</th>
-        <th style="width: 136px">操作</th>
+        <th style="width: 180px">操作</th>
       </tr>
       <tr *ngFor="let article of articles | articleFilter: 'title': keyword">
         <td>第{{article.attributes.field_term}}期</td>
@@ -34,8 +34,8 @@
         </td>
         <td>{{article.attributes.tags}}</td>
         <td>
-          <a href="javascript:;" class="btn btn-warning btn-xs" (click)="update(article)"><span class="glyphicon glyphicon-pencil"></span> 修改</a> &nbsp;
-          <a href="" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> 删除</a>
+          <button (click)="update(article)" mat-button color="primary">Update</button>
+          <a mat-flat-button>Delete</a>
         </td>
       </tr>
       </tbody>

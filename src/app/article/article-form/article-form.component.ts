@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ArticleService } from '../../services/article.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { FormBuilder, FormGroup } from '@angular/forms';
-import { Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-article-form',
@@ -23,22 +22,23 @@ export class ArticleFormComponent implements OnInit {
   ngOnInit() {
     const uuid = this.route.snapshot.paramMap.get('id');
     this.getArticle(uuid);
-    
-    console.log(this.article);
-
-    this.articleForm = this.fb.group({
-      title: [this.article.attributes.title, Validators.required],
-      author: [this.article.attributes.field_author, Validators.required],
-      link: [this.article.attributes.field_url.uri, Validators.required],
-      desc: [this.article.attributes.body.summary, Validators.required],
-      categories: [this.article.attributes.tags, Validators.required]
-    });
   }
 
   getArticle(uuid) {
     this.articleService.getArticle(uuid).subscribe(json => {
       this.article = json.data;
-      console.log(this);
+      console.log(this.article);
+      const field = json.data.attributes;
+
+      // fb
+      console.log(field);
+      this.articleForm = this.fb.group({
+        itle: [field.title, Validators.required],
+        author: [field.field_author, Validators.required],
+        link: [field.field_url.uri, Validators.required],
+        desc: [field.body.summary, Validators.required],
+        categories: ['', Validators.required]
+      });
     });
   }
 
