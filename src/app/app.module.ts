@@ -13,7 +13,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ArticleFormComponent } from './article/article-form/article-form.component';
 import { ArticleFilterPipe } from './article/article-filter.pipe';
 import { PhotosModule } from './photos/photos.module';
-
 /**
  * 配置路由信息
  * 并用RouterModule.forRoot 方法来配置路由器，并把它的返回值添加到AppModule的imports数组中
@@ -35,13 +34,13 @@ const appRoutes: Routes = [
     StarsComponent,
     DashboardComponent,
     ArticleFormComponent,
-    ArticleFilterPipe,
-    PhotosModule
+    ArticleFilterPipe
   ],
   // 声明正常运转还需要什么东西，也就是AppModule模块依赖的模块
   imports: [
-    BrowserModule,
+    PhotosModule,
     CoreModule,
+    BrowserModule,
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,

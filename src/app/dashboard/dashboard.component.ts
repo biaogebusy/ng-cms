@@ -1,7 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { UnsplashService } from '../services/unsplash.service';
 import { IGallery } from '../inerfaces/gallery';
-import { IPhoto } from '../inerfaces/photo';
 
 @Component({
   selector: 'app-dashboard',

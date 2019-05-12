@@ -6,8 +6,10 @@ import { IPhoto } from 'src/app/inerfaces/photo';
   templateUrl: './photo.component.html',
   styleUrls: ['./photo.component.css']
 })
+
 export class PhotoComponent implements OnInit {
   @Input() item: IPhoto;
+
   avatarStyles: {};
   constructor() {}
 

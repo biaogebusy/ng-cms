@@ -4,12 +4,8 @@ import { PhotoListComponent } from './photo-list/photo-list.component';
 import { PhotoComponent } from './photo/photo.component';
 
 @NgModule({
-  declarations: [
-    PhotoComponent,
-    PhotoListComponent
-  ],
-  imports: [
-    SharedModule
-  ]
+  declarations: [PhotoComponent, PhotoListComponent],
+  imports: [SharedModule],
+  exports: [PhotoComponent, PhotoListComponent]
 })
-export class PhotosModule { }
+export class PhotosModule {}
