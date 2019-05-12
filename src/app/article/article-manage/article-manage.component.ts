@@ -32,7 +32,7 @@ export class ArticleManageComponent implements OnInit {
   }
 
   create() {
-    this.router.navigateByUrl('/manage/1');
+    // this.router.navigateByUrl('/manage/1');
   }
 
   update(article) {
