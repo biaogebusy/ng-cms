@@ -10,7 +10,7 @@ export class ArticleFilterPipe implements PipeTransform {
       return list;
     }
     return list.filter(item => {
-      const itemFiledValue = item[field].toLowerCase();
+      const itemFiledValue = item.attributes.title.toLowerCase();
       return itemFiledValue.indexOf(keyword) >= 0;
     });
   }
