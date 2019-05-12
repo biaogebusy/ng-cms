@@ -11,7 +11,7 @@ import { StarsComponent } from './stars/stars.component';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ArticleFormComponent } from './article/article-form/article-form.component';
-import { ArticleFilterPipe } from './article/article-filter.pipe';
+import { ArticleFilterPipe } from './pipe/article-filter.pipe';
 import { PhotosModule } from './photos/photos.module';
 import { DialogComponent } from './dialog/dialog.component';
 /**
