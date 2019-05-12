@@ -1,3 +1,7 @@
-<p>
-  article-node works!
-</p>
+<article>
+  <div class="page-header">
+    <h1>{{article.attributes.title}}</h1>
+  </div>
+  <div class="article-body" [outerHTML]="article.attributes.body.processed"></div>
+  <p>{{article.attributes.created}}</p>
+</article>
