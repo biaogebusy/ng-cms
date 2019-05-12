@@ -14,15 +14,17 @@ import { ArticleFormComponent } from './article/article-form/article-form.compon
 import { ArticleFilterPipe } from './pipe/article-filter.pipe';
 import { PhotosModule } from './photos/photos.module';
 import { DialogComponent } from './dialog/dialog.component';
+import { ArticleNodeComponent } from './article/article-node/article-node.component';
 /**
  * 配置路由信息
  * 并用RouterModule.forRoot 方法来配置路由器，并把它的返回值添加到AppModule的imports数组中
  */
 const appRoutes: Routes = [
-  {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
-  {path: 'dashboard', component: DashboardComponent},
-  {path: 'manage', component: ArticleManageComponent},
-  {path: 'manage/:id', component: ArticleFormComponent}
+  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+  { path: 'dashboard', component: DashboardComponent },
+  { path: 'manage', component: ArticleManageComponent },
+  { path: 'manage/:id', component: ArticleFormComponent },
+  { path: 'article/:id', component: ArticleNodeComponent }
 ];
 
 // NgModule 装饰器
@@ -36,7 +38,8 @@ const appRoutes: Routes = [
     DashboardComponent,
     ArticleFormComponent,
     ArticleFilterPipe,
-    DialogComponent
+    DialogComponent,
+    ArticleNodeComponent
   ],
   // 声明正常运转还需要什么东西，也就是AppModule模块依赖的模块
   imports: [

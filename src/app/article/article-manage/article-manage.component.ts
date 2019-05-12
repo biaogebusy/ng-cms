@@ -38,4 +38,8 @@ export class ArticleManageComponent implements OnInit {
   update(article) {
     this.router.navigateByUrl('/manage/' + article.id);
   }
+
+  preview(article) {
+    this.router.navigateByUrl('/article/' + article.id);
+  }
 }
