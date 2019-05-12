@@ -37,4 +37,11 @@ export class UnsplashService {
         .then(toJson)
     );
   }
+
+  searchPhoto(keyword: string, page: number, per_page: number): Observable<IGallery>{
+    return from(
+      this.unsplash.search.photos(keyword, page, per_page)
+      .then(toJson)
+    );
+  }
 }
