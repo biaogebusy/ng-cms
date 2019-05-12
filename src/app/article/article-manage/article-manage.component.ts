@@ -6,7 +6,7 @@ import { debounceTime } from 'rxjs/operators';
 @Component({
   selector: 'app-article-manage',
   templateUrl: './article-manage.component.html',
-  styleUrls: ['./article-manage.component.css']
+  styleUrls: ['./article-manage.component.scss']
 })
 export class ArticleManageComponent implements OnInit {
   nameFilter: FormControl = new FormControl();

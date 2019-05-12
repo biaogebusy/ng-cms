@@ -7,7 +7,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-article-node',
   templateUrl: './article-node.component.html',
-  styleUrls: ['./article-node.component.css']
+  styleUrls: ['./article-node.component.scss']
 })
 export class ArticleNodeComponent implements OnInit {
   article: Article;

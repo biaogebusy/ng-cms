@@ -6,7 +6,7 @@ import { DialogComponent } from '../../dialog/dialog.component';
 @Component({
   selector: 'app-photo',
   templateUrl: './photo.component.html',
-  styleUrls: ['./photo.component.css']
+  styleUrls: ['./photo.component.scss']
 })
 export class PhotoComponent implements OnInit {
   @Input() item: Collection;

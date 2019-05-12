@@ -3,7 +3,7 @@ import { Component, Input, OnInit, Output, EventEmitter, OnChanges } from '@angu
 @Component({
   selector: 'app-stars',
   templateUrl: './stars.component.html',
-  styleUrls: ['./stars.component.css']
+  styleUrls: ['./stars.component.scss']
 })
 export class StarsComponent implements OnInit, OnChanges {
   /**

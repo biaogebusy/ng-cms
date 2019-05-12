@@ -6,7 +6,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 @Component({
   selector: 'app-article-form',
   templateUrl: './article-form.component.html',
-  styleUrls: ['./article-form.component.css']
+  styleUrls: ['./article-form.component.scss']
 })
 export class ArticleFormComponent implements OnInit {
   article: any;
