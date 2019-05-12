@@ -19,7 +19,7 @@ export class PhotoComponent implements OnInit {
     const dialogRef = this.dialog.open(DialogComponent, {
       data: {
         title: this.item.title,
-        content: `<img src="${this.item.cover_photo.urls.regular}" />`
+        content: `<img src="${this.item.cover_photo.urls.small}" />`
       }
     });
 

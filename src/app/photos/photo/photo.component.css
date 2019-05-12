@@ -1,3 +1,7 @@
 :host .mat-card {
   margin-bottom: 20px;
 }
+
+:host .mat-card-image {
+  cursor: nwse-resize;
+}

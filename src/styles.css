@@ -2,7 +2,3 @@
 @import "../bower_components/font-awesome/css/font-awesome.min.css";
 @import "../bower_components/ionicons/docs/css/ionicons.min.css";
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
-
-img{
-  max-width: 100%;
-}
