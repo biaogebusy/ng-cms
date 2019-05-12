@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { IPhoto } from 'src/app/inerfaces/photo';
+import { Collection } from '../../inerfaces/collection';
 
 @Component({
   selector: 'app-photo',
@@ -8,7 +9,7 @@ import { IPhoto } from 'src/app/inerfaces/photo';
 })
 
 export class PhotoComponent implements OnInit {
-  @Input() item: IPhoto;
+  @Input() item: Collection;
 
   avatarStyles: {};
   constructor() {}
