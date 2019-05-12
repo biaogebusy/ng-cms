@@ -1,5 +1,5 @@
-<h2 mat-dialog-title>{{dialogData.title}}</h2>
-<div mat-dialog-content>{{dialogData.content}}</div>
+<h2 mat-dialog-title>{{data.title}}</h2>
+<div mat-dialog-content [outerHTML]="data.content"></div>
 <div mat-dialog-actions>
   <button mat-button mat-dialog-close>No</button>
 </div>

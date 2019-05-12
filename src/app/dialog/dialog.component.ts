@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Inject } from '@angular/core';
 import { DialogData } from '../inerfaces/dialogData';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 @Component({
   selector: 'app-dialog',
   templateUrl: './dialog.component.html',
@@ -7,10 +8,14 @@ import { DialogData } from '../inerfaces/dialogData';
 })
 export class DialogComponent implements OnInit {
 
-  @Input() dialogData: DialogData;
-  constructor() { }
+  constructor(
+    public dialogRef: MatDialogRef<DialogComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: DialogData
+    ) {
+   }
 
   ngOnInit() {
+    console.log(this.data)
   }
 
 }
