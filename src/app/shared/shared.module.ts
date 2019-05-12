@@ -7,7 +7,8 @@ import {
   MatIconModule,
   MatInputModule,
   MatToolbarModule,
-  MatListModule
+  MatListModule,
+  MatDialogModule
 } from '@angular/material';
 
 import { MatGridListModule } from '@angular/material/grid-list';
@@ -27,6 +28,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatCardModule,
     MatInputModule,
     MatListModule,
+    MatDialogModule,
     FlexLayoutModule,
     MatGridListModule
   ],
