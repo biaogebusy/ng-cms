@@ -8,7 +8,6 @@ import { DialogComponent } from '../../dialog/dialog.component';
   templateUrl: './photo.component.html',
   styleUrls: ['./photo.component.css']
 })
-
 export class PhotoComponent implements OnInit {
   @Input() item: Collection;
 
@@ -17,9 +16,10 @@ export class PhotoComponent implements OnInit {
 
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogComponent, {
+      height: '80vh',
       data: {
         title: this.item.title,
-        content: `<img src="${this.item.cover_photo.urls.small}" />`
+        content: `<img class="img-responsive" src="${this.item.cover_photo.urls.regular}" />`
       }
     });
 
