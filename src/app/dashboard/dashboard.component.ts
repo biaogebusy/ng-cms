@@ -18,7 +18,7 @@ export class DashboardComponent implements OnInit {
   constructor(private unsplash: UnsplashService) {}
 
   ngOnInit() {
-    this.unsplash.getGallery('code').subscribe((data: IGallery) => {
+    this.unsplash.getGallery('Minimal Black and White').subscribe((data: IGallery) => {
       console.log(data);
       this.gallery = data;
     });
