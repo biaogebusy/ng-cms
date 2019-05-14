@@ -29,6 +29,6 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Build project: `ng build --prod`
 
-Deploy to Github pages: `ng build --prod --output-path docs --base-href https://biaogebusy.github.io/ng-cms`
+Deploy to Github pages: `ng build --prod --output-path docs --base-href https://biaogebusy.github.io/ng-cms/`
 
 When build done, copy `docs/index.html` to `docs/404.html` => `git push`
