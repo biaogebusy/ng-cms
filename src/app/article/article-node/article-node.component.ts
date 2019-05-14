@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
 import { Article } from 'src/app/inerfaces/article';
 import { ArticleService } from 'src/app/services/article.service';
 import { UnsplashService } from 'src/app/services/unsplash.service';
@@ -17,8 +18,9 @@ export class ArticleNodeComponent implements OnInit {
     private articleService: ArticleService,
     private unsplashService: UnsplashService,
     private router: Router,
-    private route: ActivatedRoute
-  ) {}
+    private route: ActivatedRoute,
+    private location: Location
+  ) { }
 
   ngOnInit() {
     const uuid = this.route.snapshot.paramMap.get('id');
@@ -39,5 +41,13 @@ export class ArticleNodeComponent implements OnInit {
       console.log(json);
       this.imageUrl = json.results[0].urls.regular;
     });
+  }
+
+  goBack(): void {
+    this.location.back();
+  }
+
+  update(id): void {
+    this.articleService.update(id);
   }
 }

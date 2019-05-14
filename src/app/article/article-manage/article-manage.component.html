@@ -26,7 +26,7 @@
       </tr>
       <tr *ngFor="let article of articles | articleFilter: 'title': keyword">
         <td>第{{article.attributes.field_term}}期</td>
-        <td><a href="javascript:;" (click)="preview(article)">{{article.attributes.title}}</a></td>
+        <td><a href="javascript:;" (click)="preview(article.id)">{{article.attributes.title}}</a></td>
         <td>{{article.attributes.field_author | slice:0:10}}</td>
         <td>{{article.attributes.body.summary | slice:0:100}}</td>
         <td>
@@ -34,7 +34,7 @@
         </td>
         <td>{{article.attributes.tags}}</td>
         <td>
-          <button (click)="update(article)" mat-button color="primary">Update</button>
+          <button (click)="update(article.id)" mat-button color="primary">Update</button>
           <a mat-flat-button>Delete</a>
         </td>
       </tr>

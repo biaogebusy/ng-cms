@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -18,7 +19,10 @@ export class ArticleService {
     prod: 'http://api.zhaobg.com/jsonapi/node/article'
   };
 
-  constructor(private http: HttpClient) {}
+  constructor(
+    private http: HttpClient,
+    private router: Router
+    ) {}
 
   getArticles(limit: number): any {
     // ?page[limit]=10
@@ -32,4 +36,14 @@ export class ArticleService {
   getArticle(uuid): any {
     return this.http.get(this.api.prod + '/' + uuid, httpOptions);
   }
+
+  // update article by uuid
+  update(id) {
+    this.router.navigateByUrl('/manage/' + id);
+  }
+
+  preview(id) {
+    this.router.navigateByUrl('/article/' + id);
+  }
+
 }

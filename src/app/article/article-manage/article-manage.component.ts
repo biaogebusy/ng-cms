@@ -12,7 +12,10 @@ export class ArticleManageComponent implements OnInit {
   nameFilter: FormControl = new FormControl();
   keyword: string;
 
-  constructor(private router: Router, private articleService: ArticleService) {}
+  constructor(
+    private router: Router,
+    private articleService: ArticleService
+    ) {}
 
   articles: [];
 
@@ -35,11 +38,11 @@ export class ArticleManageComponent implements OnInit {
     // this.router.navigateByUrl('/manage/1');
   }
 
-  update(article) {
-    this.router.navigateByUrl('/manage/' + article.id);
+  update(id) {
+    this.articleService.update(id);
   }
 
-  preview(article) {
-    this.router.navigateByUrl('/article/' + article.id);
+  preview(id) {
+    this.articleService.preview(id);
   }
 }
