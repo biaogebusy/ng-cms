@@ -3,7 +3,8 @@
     <mat-card-title>{{article.attributes.title}}</mat-card-title>
     <mat-card-subtitle>{{article.attributes.created}}</mat-card-subtitle>
   </mat-card-header>
-  <img mat-card-image *ngIf="imageUrl" src="{{imageUrl}}" alt="article.attributes.title">
+  <div class="card-media" [ngStyle]="mediaStyles">
+  </div>
   <mat-card-content>
     <div [outerHTML]="article.attributes.body.processed"></div>
   </mat-card-content>

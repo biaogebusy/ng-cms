@@ -4,7 +4,9 @@
     <mat-card-title>{{item.title}}</mat-card-title>
     <mat-card-subtitle>{{item.description ? item.description : 'This user is lazy'}}</mat-card-subtitle>
   </mat-card-header>
-  <img mat-card-image [src]="item.cover_photo.urls.regular" (click)="openDialog()" alt="{{item.cover_photo.alt_description}}">
+  <div class="card-media">
+    <img mat-card-image [src]="item.cover_photo.urls.regular" (click)="openDialog()" alt="{{item.cover_photo.alt_description}}">
+  </div>
   <mat-card-content>
     <p>
       {{item.cover_photo.alt_description}}

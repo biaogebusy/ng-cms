@@ -11,10 +11,11 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./article-node.component.scss']
 })
 export class ArticleNodeComponent implements OnInit {
-
   public loading = true;
   article: Article;
   imageUrl: string;
+
+  mediaStyles = {};
 
   constructor(
     private articleService: ArticleService,
@@ -22,7 +23,7 @@ export class ArticleNodeComponent implements OnInit {
     private router: Router,
     private route: ActivatedRoute,
     private location: Location
-  ) { }
+  ) {}
 
   ngOnInit() {
     const uuid = this.route.snapshot.paramMap.get('id');
@@ -43,6 +44,9 @@ export class ArticleNodeComponent implements OnInit {
     this.unsplashService.searchPhoto(keyword, 1, 1).subscribe(json => {
       console.log(json);
       this.imageUrl = json.results[0].urls.regular;
+      this.mediaStyles = {
+        'background-image': `url(${this.imageUrl})`
+      };
     });
   }
 

@@ -1,7 +1,22 @@
 :host .mat-card {
   margin-bottom: 20px;
-}
-
-:host .mat-card-image {
-  cursor: nwse-resize;
+  .card-media {
+    width: calc(100% + 32px);
+    margin: 0 -16px 16px -16px;
+    position: relative;
+    overflow: hidden;
+    &:before {
+      content: '';
+      display: block;
+      padding-top: 75%; // 4:3
+    }
+  }
+  .mat-card-image {
+    cursor: nwse-resize;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
 }
