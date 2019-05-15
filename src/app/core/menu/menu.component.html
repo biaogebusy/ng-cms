@@ -34,6 +34,7 @@
       <li *ngFor="let menu of menus" [class.active]="currentMenu == menu.id">
         <a href="javascript:;" (click)="nav(menu)"><i class="fa fa-link"></i> <span>{{menu.title}}</span></a>
       </li>
+      <li><a href="https://github.com/biaogebusy/ng-cms" target="_blank"><i class="fa fa-github"></i> <span>Github</span></a></li>
       <!-- <li class="treeview">
         <a href="#"><i class="fa fa-link"></i> <span>推荐文章</span>
           <span class="pull-right-container">
