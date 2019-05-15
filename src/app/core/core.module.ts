@@ -10,12 +10,15 @@ import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 
 import { MatIconRegistry } from '@angular/material';
+import { LoadingComponent } from './loading/loading.component';
 @NgModule({
   declarations: [
     MenuComponent,
     HeaderComponent,
     SidebarComponent,
-    FooterComponent
+    FooterComponent,
+    LoadingComponent,
+    LoadingComponent
   ],
   imports: [CommonModule, BrowserAnimationsModule, SharedModule],
   exports: [
@@ -23,7 +26,8 @@ import { MatIconRegistry } from '@angular/material';
     HeaderComponent,
     SidebarComponent,
     FooterComponent,
-    SharedModule
+    SharedModule,
+    LoadingComponent
   ]
 })
 export class CoreModule {
