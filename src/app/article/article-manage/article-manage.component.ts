@@ -9,6 +9,8 @@ import { debounceTime } from 'rxjs/operators';
   styleUrls: ['./article-manage.component.scss']
 })
 export class ArticleManageComponent implements OnInit {
+
+  public loading = true;
   nameFilter: FormControl = new FormControl();
   keyword: string;
 
@@ -31,6 +33,7 @@ export class ArticleManageComponent implements OnInit {
     this.articleService.getArticles(8).subscribe(json => {
       this.articles = json.data;
       console.log(this.articles);
+      this.loading = false;
     });
   }
 

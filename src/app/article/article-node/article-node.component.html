@@ -11,4 +11,5 @@
     <button mat-button (click)="update(article.id)">编辑</button>
     <button mat-button (click)="goBack()">返回</button>
   </mat-card-actions>
+  <app-loading *ngIf="loading"></app-loading>
 </mat-card>

@@ -11,6 +11,8 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./article-node.component.scss']
 })
 export class ArticleNodeComponent implements OnInit {
+
+  public loading = true;
   article: Article;
   imageUrl: string;
 
@@ -31,6 +33,7 @@ export class ArticleNodeComponent implements OnInit {
     this.articleService.getArticle(uuid).subscribe(json => {
       console.log(json);
       this.article = json.data;
+      this.loading = false;
       const keyword = json.data.attributes.title;
       this.searchPhoto(keyword);
     });

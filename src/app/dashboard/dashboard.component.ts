@@ -9,6 +9,8 @@ import { IGallery } from '../inerfaces/gallery';
 })
 export class DashboardComponent implements OnInit {
 
+  public loading = true;
+
   gallery: IGallery = {
     total: 0,
     total_pages: 0,
@@ -21,6 +23,7 @@ export class DashboardComponent implements OnInit {
     this.unsplash.getGallery('Minimal Black and White').subscribe((data: IGallery) => {
       console.log(data);
       this.gallery = data;
+      this.loading = false;
     });
   }
 }

@@ -1,1 +1,4 @@
-<app-photo-list [photos]="gallery.results"></app-photo-list>
+<div class="dashboard">
+  <app-photo-list [photos]="gallery.results"></app-photo-list>
+  <app-loading *ngIf="loading"></app-loading>
+</div>
