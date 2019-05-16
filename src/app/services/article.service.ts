@@ -5,7 +5,8 @@ import { Router } from '@angular/router';
 const httpOptions = {
   headers: new HttpHeaders({
     // Make sure you always send the accept header: Accept: application/vnd.api+json.
-    Accept: 'application/vnd.api+json'
+    'Accept': 'application/vnd.api+json',
+    'Content-Type': 'application/vnd.api+json'
   })
 };
 
