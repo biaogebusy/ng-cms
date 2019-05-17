@@ -17,6 +17,7 @@ import { DialogComponent } from './dialog/dialog.component';
 import { ArticleNodeComponent } from './article/article-node/article-node.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { WINDOW_PROVIDERS } from './services/window.service';
 /**
  * 配置路由信息
  * 并用RouterModule.forRoot 方法来配置路由器，并把它的返回值添加到AppModule的imports数组中
@@ -52,14 +53,16 @@ const appRoutes: Routes = [
     HttpClientModule,
     ReactiveFormsModule,
     RouterModule.forRoot(appRoutes),
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production
+    })
   ],
   // 模块中提供了什么服务，只能声明服务
-  providers: [],
+  providers: [WINDOW_PROVIDERS],
   // 声明主组件
-  entryComponents: [
-    DialogComponent
-  ],
+  entryComponents: [DialogComponent],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule {
+  constructor() {}
+}
