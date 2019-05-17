@@ -15,6 +15,8 @@ import { ArticleFilterPipe } from './pipe/article-filter.pipe';
 import { PhotosModule } from './photos/photos.module';
 import { DialogComponent } from './dialog/dialog.component';
 import { ArticleNodeComponent } from './article/article-node/article-node.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 /**
  * 配置路由信息
  * 并用RouterModule.forRoot 方法来配置路由器，并把它的返回值添加到AppModule的imports数组中
@@ -49,7 +51,8 @@ const appRoutes: Routes = [
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   // 模块中提供了什么服务，只能声明服务
   providers: [],
