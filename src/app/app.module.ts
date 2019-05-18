@@ -16,7 +16,7 @@ import { DialogComponent } from './dialog/dialog.component';
 import { ArticleNodeComponent } from './article/article-node/article-node.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-import { WINDOW_PROVIDERS } from './services/window.service';
+// import { WINDOW_PROVIDERS } from './services/window.service';
 import { AppRoutingModule } from './app-routing.module';
 
 
@@ -48,7 +48,7 @@ import { AppRoutingModule } from './app-routing.module';
     AppRoutingModule
   ],
   // 模块中提供了什么服务，只能声明服务
-  providers: [WINDOW_PROVIDERS],
+  providers: [],
   // 声明主组件
   entryComponents: [DialogComponent],
   bootstrap: [AppComponent]
