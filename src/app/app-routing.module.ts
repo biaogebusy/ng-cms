@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes} from '@angular/router';
+import { RouterModule, Routes, PreloadAllModules} from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ArticleManageComponent } from './article/article-manage/article-manage.component';
 import { ArticleFormComponent } from './article/article-form/article-form.component';
@@ -19,7 +19,13 @@ const appRoutes: Routes = [
 
 @NgModule({
   declarations: [],
-  imports: [RouterModule.forRoot(appRoutes, {initialNavigation: 'enabled'})],
+  imports: [
+    RouterModule.forRoot(appRoutes, {
+      preloadingStrategy: PreloadAllModules,
+      initialNavigation: 'enabled',
+      enableTracing: true
+    })
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule {}
