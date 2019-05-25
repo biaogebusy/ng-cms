@@ -12,4 +12,9 @@
       padding-top: 45%; // 16:9
     }
   }
+  .mat-card-content{
+    img{
+      max-width: 100%;
+    }
+  }
 }
