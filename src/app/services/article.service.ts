@@ -16,7 +16,7 @@ export class ArticleService {
   // web api
   private api = {
     dev: 'http://jsonapi.dd:8083/jsonapi/node/article',
-    prod: 'http://api.zhaobg.com/jsonapi/node/article'
+    prod: 'https://api.zhaobg.com/jsonapi/node/article'
   };
 
   constructor(
