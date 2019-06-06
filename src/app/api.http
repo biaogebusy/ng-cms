@@ -5,6 +5,11 @@ GET https://api.zhaobg.com/jsonapi/node/article
 
 Accept: application/vnd.api+json
 
+### limit
+GET https://api.zhaobg.com/jsonapi/node/article?page[limit]=3
+
+Accept: application/vnd.api+json
+
 ### requesting a node
 GET https://api.zhaobg.com/jsonapi/node/article/946501cc-0303-4067-b254-021666cfed03
 
@@ -32,6 +37,16 @@ Accept: application/vnd.api+json
 GET https://api.zhaobg.com/jsonapi/node/article?fields[node--article]=uid,title,created,body
 
 Accept: application/vnd.api+json
+
+###
+
+# sort 排序 正序，倒序
+# GET https://api.zhaobg.com/jsonapi/node/article?sort=created
+
+GET https://api.zhaobg.com/jsonapi/node/article?sort=-created
+
+Accept: application/vnd.api+json
+
 
 ###
 
