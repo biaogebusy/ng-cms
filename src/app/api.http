@@ -1,18 +1,54 @@
 # https://www.drupal.org/docs/8/modules/jsonapi/fetching-resources-get
 
+### fetch all article
 GET https://api.zhaobg.com/jsonapi/node/article
+
+Accept: application/vnd.api+json
+
+### requesting a node
+GET https://api.zhaobg.com/jsonapi/node/article/946501cc-0303-4067-b254-021666cfed03
+
+Accept: application/vnd.api+json
+
+### filter 
+# GET https://api.zhaobg.com/jsonapi/node/article?filter[status][value]=1
+#获取置顶 GET https://api.zhaobg.com/jsonapi/node/article?filter[stiky][value]=1
+GET https://api.zhaobg.com/jsonapi/node/article?filter[uid.name][value]=webmaster
+Accept: application/vnd.api+json
+
+### requesting entity info
+GET https://api.zhaobg.com/jsonapi/node_type/node_type/731e6eb4-e5d3-4190-baf8-ce451766947d
+
+Accept: application/vnd.api+json
+
+### requesting node taxonomy
+GET https://api.zhaobg.com/jsonapi/taxonomy/category/6054a41c-e405-4d8b-8694-95cb20058ce8
 
 Accept: application/vnd.api+json
 
 ###
 
 # 按需选择字段
-GET https://api.zhaobg.com/jsonapi/node/article?fields[node--article]=uid,title,created
+GET https://api.zhaobg.com/jsonapi/node/article?fields[node--article]=uid,title,created,body
+
+Accept: application/vnd.api+json
+
+###
+
+# 按需选择字段
+GET https://api.zhaobg.com/jsonapi/node/article/946501cc-0303-4067-b254-021666cfed03?include=field_image,field_image.image,field_image.image.file--file&fields[field_image]=image&fields[file--file]=uri,url
 
 Accept: application/vnd.api+json
 
 ###
 
 GET https://api.zhaobg.com/jsonapi/user/user
+
+Accept: application/vnd.api+json
+
+
+###
+# taxonomy
+GET https://api.zhaobg.com/jsonapi/taxonomy_term/topic?fields[taxonomy_term--topic]=id,name&sort=name
 
 Accept: application/vnd.api+json
