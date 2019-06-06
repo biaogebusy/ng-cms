@@ -1,3 +1,18 @@
+# https://www.drupal.org/docs/8/modules/jsonapi/fetching-resources-get
+
 GET https://api.zhaobg.com/jsonapi/node/article
+
+Accept: application/vnd.api+json
+
+###
+
+# 按需选择字段
+GET https://api.zhaobg.com/jsonapi/node/article?fields[node--article]=uid,title,created
+
+Accept: application/vnd.api+json
+
+###
+
+GET https://api.zhaobg.com/jsonapi/user/user
 
 Accept: application/vnd.api+json
