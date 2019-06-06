@@ -52,3 +52,9 @@ Accept: application/vnd.api+json
 GET https://api.zhaobg.com/jsonapi/taxonomy_term/topic?fields[taxonomy_term--topic]=id,name&sort=name
 
 Accept: application/vnd.api+json
+
+
+### include => 根据 relationships 中的字段来获取相应详细信息，在一个请求中获得所有的数据
+GET https://api.zhaobg.com/jsonapi/node/article/946501cc-0303-4067-b254-021666cfed03?include=uid,field_category
+
+Accept: application/vnd.api+json
