@@ -64,8 +64,8 @@ Accept: application/vnd.api+json
 
 ###
 # taxonomy
-GET https://api.zhaobg.com/jsonapi/taxonomy_term/topic?fields[taxonomy_term--topic]=id,name&sort=name
-
+GET https://api.zhaobg.com/jsonapi/taxonomy_term/category?fields[taxonomy_term--category]=id,name&sort=name
+# https://api.zhaobg.com/jsonapi/taxonomy_term/category
 Accept: application/vnd.api+json
 
 
