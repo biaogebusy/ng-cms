@@ -1,5 +1,7 @@
 # https://www.drupal.org/docs/8/modules/jsonapi/fetching-resources-get
 
+# https://api.zhaobg.com/admin/config/services/jsonapi/resource_types
+
 ### fetch all article
 GET https://api.zhaobg.com/jsonapi/node/article
 
