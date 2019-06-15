@@ -27,7 +27,7 @@ export class ArticleManageComponent implements OnInit {
   }
 
   getArticles(): void {
-    this.articleService.getArticles(20).subscribe(json => {
+    this.articleService.getArticles(120).subscribe(json => {
       this.articles = this.soryByTerm(json.data);
       console.log(this.articles);
       this.loading = false;

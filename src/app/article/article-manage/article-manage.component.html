@@ -4,9 +4,11 @@
     <div class="box-tools">
       <div class="input-group input-group-sm" style="width: 150px;">
         <input [formControl]="nameFilter" type="text" name="table_search" class="form-control pull-right"
-          placeholder="搜索标题">
+          placeholder="搜索标题" />
         <div class="input-group-btn">
-          <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+          <button type="submit" class="btn btn-default">
+            <i class="fa fa-search"></i>
+          </button>
         </div>
       </div>
     </div>
@@ -15,29 +17,34 @@
   <div class="box-body">
     <table class="table table-bordered">
       <tbody>
-      <tr>
-        <th style="width: 70px">期数</th>
-        <th>标题</th>
-        <th>作者</th>
-        <th>文章简介</th>
-        <th style="width: 100px">推荐指数</th>
-        <th style="width: 60px">分类</th>
-        <th style="width: 180px">操作</th>
-      </tr>
-      <tr *ngFor="let article of articles | articleFilter: 'title': keyword">
-        <td>第{{article.attributes.field_term}}期</td>
-        <td><a href="javascript:;" (click)="preview(article.id)">{{article.attributes.title}}</a></td>
-        <td>{{article.attributes.field_author | slice:0:10}}</td>
-        <td>{{article.attributes.body.summary | slice:0:100}}</td>
-        <td>
-          <app-stars [rating]="article.attributes.field_star"></app-stars>
-        </td>
-        <td>{{article.attributes.tags}}</td>
-        <td>
-          <button (click)="update(article.id)" mat-button color="primary">Update</button>
-          <a mat-flat-button>Delete</a>
-        </td>
-      </tr>
+        <tr>
+          <th style="width: 70px">期数</th>
+          <th>标题</th>
+          <th>作者</th>
+          <th>文章简介</th>
+          <th style="width: 100px">推荐指数</th>
+          <th style="width: 60px">分类</th>
+          <th style="width: 180px">操作</th>
+        </tr>
+        <tr *ngFor="let article of articles | articleFilter: 'title':keyword">
+          <td>第{{ article.attributes.field_term }}期</td>
+          <td>
+            <a href="javascript:;" (click)="preview(article.id)">
+              {{ article.attributes.title }}</a>
+          </td>
+          <td>{{ article.attributes.field_author | slice: 0:10 }}</td>
+          <td>{{ article.attributes.body.summary | slice: 0:100 }}</td>
+          <td>
+            <app-stars [rating]="article.attributes.field_star"></app-stars>
+          </td>
+          <td>{{ article.attributes.field_type }}</td>
+          <td>
+            <button (click)="update(article.id)" mat-button color="primary">
+              Update
+            </button>
+            <a mat-flat-button>Delete</a>
+          </td>
+        </tr>
       </tbody>
     </table>
   </div>

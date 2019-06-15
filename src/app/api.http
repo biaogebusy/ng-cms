@@ -2,6 +2,13 @@
 
 # https://api.zhaobg.com/admin/config/services/jsonapi/resource_types
 
+GET https://api.zhaobg.com/jsonapi
+
+Accept: application/vnd.api+json
+
+###
+GET https://api.zhaobg.com/jsonapi/node/page
+
 ### fetch all article
 GET https://api.zhaobg.com/jsonapi/node/article
 
@@ -71,7 +78,18 @@ GET https://api.zhaobg.com/jsonapi/taxonomy_term/category?fields[taxonomy_term--
 Accept: application/vnd.api+json
 
 
+# include 只有在单个node页面才生效
 ### include => 根据 relationships 中的字段来获取相应详细信息，在一个请求中获得所有的数据
 GET https://api.zhaobg.com/jsonapi/node/article/946501cc-0303-4067-b254-021666cfed03?include=uid,field_category
+
+Accept: application/vnd.api+json
+
+# https://api.zhaobg.com/jsonapi/node/article?filter[title]=The Animations Module in Drupal 8&fields[node--article]=title,field_category&include=field_category&fields[taxonomy_term--category]=name
+
+###
+https://api.zhaobg.com/jsonapi/node/article?fields[node--article]=title,sticky,changed,body,field_image,field_category&include=field_image,field_category&sort=-changed
+
+###
+https://api.zhaobg.com/jsonapi/node/article?fields[node--article]=title,field_type,sticky,changed,body&include=field_image&sort=-changed
 
 Accept: application/vnd.api+json
