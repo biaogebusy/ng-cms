@@ -1,0 +1,15 @@
+.item-media {
+  overflow: hidden;
+
+  >img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.article-list {
+  padding: 20px 0;
+  border-bottom: 1px solid #ebebeb;
+}

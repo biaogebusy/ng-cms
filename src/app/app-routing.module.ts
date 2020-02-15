@@ -4,6 +4,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ArticleManageComponent } from './article/article-manage/article-manage.component';
 import { ArticleFormComponent } from './article/article-form/article-form.component';
 import { ArticleNodeComponent } from './article/article-node/article-node.component';
+import { ArticleListComponent } from './article/article-list/article-list.component';
 
 /**
  * 配置路由信息
@@ -12,6 +13,7 @@ import { ArticleNodeComponent } from './article/article-node/article-node.compon
 const appRoutes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent },
+  { path: 'articles', component: ArticleListComponent },
   { path: 'manage', component: ArticleManageComponent },
   { path: 'manage/:id', component: ArticleFormComponent },
   { path: 'article/:id', component: ArticleNodeComponent }

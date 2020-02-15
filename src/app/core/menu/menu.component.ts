@@ -15,7 +15,8 @@ export class MenuComponent implements OnInit {
   ngOnInit() {
     this.menus = [
       new Menu(1, '首页', 'dashboard'),
-      new Menu(2, '文章管理', 'manage')
+      new Menu(2, '文章列表', 'articles'),
+      new Menu(3, '文章管理', 'manage')
     ];
   }
 

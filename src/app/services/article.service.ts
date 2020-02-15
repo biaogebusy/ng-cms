@@ -24,12 +24,11 @@ export class ArticleService {
     private router: Router
     ) {}
 
-  getArticles(limit: number): any {
+  getArticles(limit: number, fields = 'all', include = ''): any {
     // ?page[limit]=10
     let filter = '';
-    if (limit) {
-      filter = `?page[limit]=${limit}`;
-    }
+    filter = `?page[limit]=${limit}&fields=${fields}&include=${include}`;
+
     return this.http.get(`${this.api.prod}${filter}`, httpOptions);
   }
 

@@ -6,14 +6,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { ContentComponent } from './content/content.component';
-import { ArticleManageComponent } from './article/article-manage/article-manage.component';
 import { StarsComponent } from './stars/stars.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ArticleFormComponent } from './article/article-form/article-form.component';
+import { ArticleManageComponent } from './article/article-manage/article-manage.component';
+import { ArticleListComponent } from './article/article-list/article-list.component';
+import { ArticleNodeComponent } from './article/article-node/article-node.component';
 import { ArticleFilterPipe } from './pipe/article-filter.pipe';
 import { PhotosModule } from './photos/photos.module';
 import { DialogComponent } from './dialog/dialog.component';
-import { ArticleNodeComponent } from './article/article-node/article-node.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 // import { WINDOW_PROVIDERS } from './services/window.service';
@@ -32,7 +33,8 @@ import { AppRoutingModule } from './app-routing.module';
     ArticleFormComponent,
     ArticleFilterPipe,
     DialogComponent,
-    ArticleNodeComponent
+    ArticleNodeComponent,
+    ArticleListComponent
   ],
   // 声明正常运转还需要什么东西，也就是AppModule模块依赖的模块
   imports: [
