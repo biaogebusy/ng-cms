@@ -11,7 +11,7 @@ import { ArticleListComponent } from './article/article-list/article-list.compon
  * 并用RouterModule.forRoot 方法来配置路由器，并把它的返回值添加到AppModule的imports数组中
  */
 const appRoutes: Routes = [
-  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+  { path: '', redirectTo: 'articles', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'articles', component: ArticleListComponent },
   { path: 'manage', component: ArticleManageComponent },
